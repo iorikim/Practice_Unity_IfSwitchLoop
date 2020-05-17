@@ -7,7 +7,19 @@ using UnityEngine.UI;
 public class ifelse : MonoBehaviour // 如果你發現 MonoBehaviour 這段文字是白色,那就代表剛剛的設定沒有開
 {
     [Header("血量"), Range(0, 100)]
-    public int HP = 0;
+    private int HPP;
+
+     //public int HP {>= get; set; }
+     // 現在可以看到 HPP 的H 下方 有3個灰點
+     // 滑鼠移到那邊,按下滑鼠右鍵
+     // 會出現快速動作與重構,也就是最上面第一個選項
+     // 點選第二個選項,使用封裝欄位,並使用屬性
+     //
+
+    //可以看一下其他腳本嗎?忘了
+    //咦，怎麼改成hp就不會看到3個點?
+    //這樣好像底下的HP就要改掉是嗎?
+
 
     [Header("補品")]
     public string prop = "紅水";
@@ -20,18 +32,19 @@ public class ifelse : MonoBehaviour // 如果你發現 MonoBehaviour 這段文�
 
     public Text water;
 
+    public int HPP1 { get => HPP; set => HPP = value; }
 
     public void Update()
     {
-        HP = (int)_Slider.value; // 是不清楚這段文字的意思嗎?
+        HPP1 = (int)_Slider.value; // 是不清楚這段文字的意思嗎?
 
 
-        if (HP >= 70)
+        if (HPP1 >= 70)
         {
 
             result.text = "安全"; // 把text 拖拉到 text 的欄位後, text 會根據 if 判斷式 偵測的情況, 來決定要用哪一個部分 輸出訊息 
         }
-        else if (HP >= 30)
+        else if (HPP1 >= 30)
         {
             result.text= "警告";
         }
@@ -40,9 +53,43 @@ public class ifelse : MonoBehaviour // 如果你發現 MonoBehaviour 這段文�
             result.text = "危險";
         }
         //三元運算子語法 - 布林運算式 ? 運算式 A : 運算式 B
-        _InputField = prop = "紅水" ? water.text + "恢復血量": prop = "藍水" ? water.text + "恢復魔力":
+        _InputField.text = prop == "紅水" ? water.text = "恢復血量" : prop == "藍水" ? water.text = "恢復魔力" : water.text =  "";
+        // water.text = prop == "紅水" ? "恢復血量" : prop == "藍水" ?"恢復魔力" : "" ;
 
+        //drinkthing.text = propDrink == "紅水" ? "恢復血量" : propDrink == "藍水" ? "恢復魔力" : "";
+        // 上面這段有些問題, 可能明天在跟你說
+        // 好哦，那最後看完第一段的問題就好，我發現第一段的功課好像得寫封裝，但我寫成public
+        // 這樣就可以了~
+        // 我會把程式碼刪除,
+        // 請你試試看~
     }
+
+    public void input1( string something ) //按鈕輸入功能
+    {
+        prop = something;
+    } //按鈕輸入功能 結束
+
+ 
+    // 上面是自己自定義一個功能
+    // 然後 因為 public 代表的是 此功能可以被其他程式碼區塊使用
+    // 因此之後可以在這個腳本的update裡,或是在其他C# 腳本語言裡呼叫使用
+    // 或是新增到按鈕功能裡面
+    // 打成 private 就不能在其他地方被使用了
+
+
+    //inputfield 裡面附的text，是可以直接用來輸出恢復血量用的嗎? 我剛剛突然看到展開inputfield有一個text，但我是把上面slider那的text複製下來再丟到canves上
+    // 它本來是用來設定 提示用的文字:
+    // 像是 : 銀行 提款機畫面的 請輸入 6位數 密碼
+    // 確認完後請按 確認鍵
+    // ...等文字
+    // 阿,抱歉,我沒講清楚
+    // 大概是這樣子
+    //
+
+
+    //懂了，他是用來覆蓋在輸入框上顯示提示的，那我剛剛其實反而弄錯了
+    //改回這樣就對了吧
+
 
     //謝謝你
     // 請問現在哪裡有問題呢?
