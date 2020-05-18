@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class ifelse : MonoBehaviour // 如果你發現 MonoBehaviour 這段文字是白色,那就代表剛剛的設定沒有開
 {
     [Header("血量"), Range(0, 100)]
-    private int HPP;
+    private int HP;
 
      //public int HP {>= get; set; }
      // 現在可以看到 HPP 的H 下方 有3個灰點
@@ -32,19 +32,19 @@ public class ifelse : MonoBehaviour // 如果你發現 MonoBehaviour 這段文�
 
     public Text water;
 
-    public int HPP1 { get => HPP; set => HPP = value; }
+    public int HP1 { get => HP; set => HP = value; }
 
     public void Update()
     {
-        HPP1 = (int)_Slider.value; // 是不清楚這段文字的意思嗎?
+        HP = (int)_Slider.value; // 是不清楚這段文字的意思嗎?
 
 
-        if (HPP1 >= 70)
+        if (HP >= 70)
         {
 
             result.text = "安全"; // 把text 拖拉到 text 的欄位後, text 會根據 if 判斷式 偵測的情況, 來決定要用哪一個部分 輸出訊息 
         }
-        else if (HPP1 >= 30)
+        else if (HP >= 30)
         {
             result.text= "警告";
         }
@@ -53,7 +53,7 @@ public class ifelse : MonoBehaviour // 如果你發現 MonoBehaviour 這段文�
             result.text = "危險";
         }
         //三元運算子語法 - 布林運算式 ? 運算式 A : 運算式 B
-        _InputField.text = prop == "紅水" ? water.text = "恢復血量" : prop == "藍水" ? water.text = "恢復魔力" : water.text =  "";
+        water.text = prop == "紅水" ?  "恢復血量" : prop == "藍水" ?   "恢復魔力" :   "";
         // water.text = prop == "紅水" ? "恢復血量" : prop == "藍水" ?"恢復魔力" : "" ;
 
         //drinkthing.text = propDrink == "紅水" ? "恢復血量" : propDrink == "藍水" ? "恢復魔力" : "";
