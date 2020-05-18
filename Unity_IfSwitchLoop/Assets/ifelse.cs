@@ -8,7 +8,8 @@ public class ifelse : MonoBehaviour // 如果你發現 MonoBehaviour 這段文�
 {
     [Header("血量"), Range(0, 100)]
     private int HP;
-
+    [Header("地板")]
+    public GameObject cube;
      //public int HP {>= get; set; }
      // 現在可以看到 HPP 的H 下方 有3個灰點
      // 滑鼠移到那邊,按下滑鼠右鍵
@@ -32,8 +33,26 @@ public class ifelse : MonoBehaviour // 如果你發現 MonoBehaviour 這段文�
 
     public Text water;
 
+    private int a;
+    private int b; 
+   
+    
     public int HP1 { get => HP; set => HP = value; }
+    private void CreateFloor(int length)
+    {
+        for(int a = 0; a <= length; a++)
+        {
+            for (int b = 0; b < a; b++) 
+            {
+                Instantiate(cube, new Vector3(a, b, 0), Quaternion.Euler(270, 0, 0));
+            }
+        }
+    }
 
+    private void Awake()
+    {
+        CreateFloor(10);
+    }
     public void Update()
     {
         HP = (int)_Slider.value; // 是不清楚這段文字的意思嗎?

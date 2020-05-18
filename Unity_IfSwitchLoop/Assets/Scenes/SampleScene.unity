@@ -931,6 +931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5886517f21e87fe4c9d701cb40241c9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cube: {fileID: 100000, guid: f044a37d78cf7b644b51493e41665e3e, type: 3}
   prop: "\u7D05\u6C34"
   _Slider: {fileID: 1618570875}
   result: {fileID: 147638948}
