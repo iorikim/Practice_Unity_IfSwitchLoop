@@ -23,7 +23,7 @@ public class ifelse : MonoBehaviour // 如果你發現 MonoBehaviour 這段文�
 
 
     [Header("補品")]
-    public string prop = "紅水";
+    public string prop;
 
     public Slider _Slider;
 
