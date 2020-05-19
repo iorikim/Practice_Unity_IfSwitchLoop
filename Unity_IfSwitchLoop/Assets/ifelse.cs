@@ -72,7 +72,7 @@ public class ifelse : MonoBehaviour // 如果你發現 MonoBehaviour 這段文�
             result.text = "危險";
         }
         //三元運算子語法 - 布林運算式 ? 運算式 A : 運算式 B
-        water.text = prop == "紅水" ?  "恢復血量" : prop == "藍水" ?   "恢復魔力" :   "";
+        water.text = _InputField.text == "紅水" ?  "恢復血量" : _InputField.text == "藍水" ?   "恢復魔力" :   "";
         // water.text = prop == "紅水" ? "恢復血量" : prop == "藍水" ?"恢復魔力" : "" ;
 
         //drinkthing.text = propDrink == "紅水" ? "恢復血量" : propDrink == "藍水" ? "恢復魔力" : "";
