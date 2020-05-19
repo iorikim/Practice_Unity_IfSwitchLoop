@@ -807,7 +807,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u8ACB\u8F38\u51656\u4F4D\u6578\u5BC6\u78BC"
+  m_Text: "\u8ACB\u8F38\u5165\u6587\u5B57"
 --- !u!222 &1220078554
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -935,7 +935,7 @@ MonoBehaviour:
   prop: "\u7D05\u6C34"
   _Slider: {fileID: 1618570875}
   result: {fileID: 147638948}
-  _InputField: {fileID: 2056429206}
+  _InputField: {fileID: 0}
   water: {fileID: 1149830227}
 --- !u!1 &1466022938
 GameObject:
@@ -1220,7 +1220,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2056429204}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d199490a83bb2b844b9695cbf13b01ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 1baf2d951ff900345adc27ac6377dd15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -1263,18 +1263,7 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1296965305}
-        m_MethodName: input1
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1285,6 +1274,10 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+  m_DialogTitle: Input Text
+  m_DialogOkBtn: OK
+  m_DialogCancelBtn: Cancel
+  m_DialogType: 0
 --- !u!114 &2056429207
 MonoBehaviour:
   m_ObjectHideFlags: 0
