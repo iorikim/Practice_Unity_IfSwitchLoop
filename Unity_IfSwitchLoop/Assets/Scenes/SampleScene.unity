@@ -935,7 +935,7 @@ MonoBehaviour:
   prop: "\u7D05\u6C34"
   _Slider: {fileID: 1618570875}
   result: {fileID: 147638948}
-  _InputField: {fileID: 0}
+  _InputField: {fileID: 2056429206}
   water: {fileID: 1149830227}
 --- !u!1 &1466022938
 GameObject:
