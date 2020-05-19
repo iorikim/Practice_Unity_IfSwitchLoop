@@ -33,8 +33,8 @@ public class ifelse : MonoBehaviour // 如果你發現 MonoBehaviour 這段文�
 
     public Text water;
 
-    private int a;
-    private int b; 
+    //private int a;
+    //private int b; 
    
     
     public int HP1 { get => HP; set => HP = value; }
@@ -44,7 +44,7 @@ public class ifelse : MonoBehaviour // 如果你發現 MonoBehaviour 這段文�
         {
             for (int b = 0; b < a; b++) 
             {
-                Instantiate(cube, new Vector3(a, b, 0), Quaternion.Euler(270, 0, 0));
+                Instantiate(cube, new Vector3(a*1.5f, b*1.5f, 0), Quaternion.Euler(270, 0, 0));
             }
         }
     }
